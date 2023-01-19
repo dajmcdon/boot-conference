@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html %}
+<body>
+    {% if site.navbar-fixed-top == false %}<div class="container">{% endif %}
+    {% include nav.html %}
+    {% if site.navbar-fixed-top == false %}</div>{% endif %}
+
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <main class="col col-md-8 offset-md-2" role="main" aria-label="Content">
+                {{ content }}
+            </main>
+        </div>
+    </div>
+
+    {% include footer.html %}
+</body>
+</html>
